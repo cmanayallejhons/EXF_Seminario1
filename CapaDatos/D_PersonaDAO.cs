@@ -12,6 +12,7 @@ namespace CapaDatos
 {
     public class D_PersonaDAO : Conexion
     {
+
         public E_PERSONA perfilPersona()
         {
             E_PERSONA persona = new E_PERSONA();

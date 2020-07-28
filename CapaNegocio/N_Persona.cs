@@ -10,6 +10,7 @@ namespace CapaNegocio
 {
     public class N_Persona
     {
+
         D_PersonaDAO personaDAO = new D_PersonaDAO();
 
         public E_PERSONA perfilPersona()
