@@ -22,5 +22,9 @@ namespace CapaNegocio
         {
             return personaDAO.buscarPersonal(documento);
         }
+        public void insertarPersona(E_PERSONA persona)
+        {
+            personaDAO.insertarPersonal(persona);
+        }
     }
 }

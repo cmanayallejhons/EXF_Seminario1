@@ -12,7 +12,7 @@ namespace CapaDatos
 {
     public class D_Docente : Conexion
     {
-        public void insertarDocente(E_PERSONA persona)
+        public void insertarDocente(E_PERSONA persona, E_NIVEL nivel)
         {
             using (var conexion = GetConnection())
             {
@@ -30,6 +30,7 @@ namespace CapaDatos
                     comand.Parameters.AddWithValue("@PE_DIRECCION", persona.pE_DIRECCION);
                     comand.Parameters.AddWithValue("@PE_SEXO", persona.pE_SEXO);
                     comand.Parameters.AddWithValue("@PE_ESTADO", persona.pE_ESTADO);
+                    comand.Parameters.AddWithValue("@NI_IDNIVEL", nivel.nI_IDNIVEL);
                     comand.Parameters.AddWithValue("@US_IDUSUARIO", UsuarioLoginCache.US_IDUSUARIO);
 
                     comand.CommandType = CommandType.StoredProcedure;

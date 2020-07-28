@@ -11,9 +11,9 @@ namespace CapaNegocio
     public class N_Docente
     {
         D_Docente docenteDao = new D_Docente();
-        public void insertarDocente(E_PERSONA persona)
+        public void insertarDocente(E_PERSONA persona,E_NIVEL nivel)
         {
-            docenteDao.insertarDocente(persona);
+            docenteDao.insertarDocente(persona,nivel);
         }
 
         public List<E_PERSONA> listarDocentes()
