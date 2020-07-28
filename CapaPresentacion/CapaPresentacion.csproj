@@ -80,6 +80,7 @@
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\ionicons.min.css" />
     <Content Include="Formularios\FormAdministrador.aspx" />
+    <Content Include="Formularios\FrmRegistrarUsuario.aspx" />
     <Content Include="HtmlPage1.html" />
     <Content Include="img\admin.png" />
     <Content Include="img\administrador.png" />
@@ -104,6 +105,13 @@
     </Compile>
     <Compile Include="Formularios\FormAdministrador.aspx.designer.cs">
       <DependentUpon>FormAdministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmRegistrarUsuario.aspx.cs">
+      <DependentUpon>FrmRegistrarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmRegistrarUsuario.aspx.designer.cs">
+      <DependentUpon>FrmRegistrarUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>
