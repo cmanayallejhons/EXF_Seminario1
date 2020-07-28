@@ -18,27 +18,25 @@ namespace login
 
         }
 
-        protected void btnRegistrarDocente_Click(object sender, EventArgs e)
+        protected void btnRegistrarDocente_Click1(object sender, EventArgs e)
         {
-
             if (txtNombre.Text != "" || txtApePa.Text != "" || txtApeMa.Text != "" || txtNumDoc.Text != "" ||
-                txtNaci.Text != "" || txtTelefono.Text != "" || txtDireccion.Text != "")
+                txtNaci.Text != "" || txtTelefono.Text != "" || txtDireccion.Text != "" || Nivel.Text != "")
             {
-                N_ n_alumno = new N_Alumno();
+                N_Docente n_docente = new N_Docente();
 
-                E_PERSONA e_persona = new E_PERSONA(txtNombre.Text, txtApePa.Text, txtApeMa.Text, txtNumDoc.Text, txtNaci.Text, txtTelefono.Text, txtDireccion.Text, txtSexo.Text, "A");
-                E_ALUMNO e_alumno = new E_ALUMNO(Convert.ToInt32(txtApoderado.Text));
+                E_PERSONA e_persona = new E_PERSONA(txtNombre.Text, txtApePa.Text, txtApeMa.Text, txtNumDoc.Text, txtNaci.Text, txtTelefono.Text, txtDireccion.Text, Nivel.Text, "A");
+                E_NIVEL e_nivel = new E_NIVEL(Convert.ToInt32(Nivel.Text));
+                n_docente.insertarDocente(e_persona, e_nivel);
 
-                n_alumno.insertarAlumno(e_persona, e_alumno);
-
-                limpiarCampos();
             }
             else
             {
                 Response.Write("<script>alert('INGRESE TODOS LOS CAMPOS')</script>");
             }
-
         }
+
+
 
         //protected void btnCancelarAlumno_Click(object sender, EventArgs e)
         //{

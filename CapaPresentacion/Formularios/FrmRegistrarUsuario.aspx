@@ -69,6 +69,12 @@
                         <div class="form-group">
                             <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
+                        <div class="form-group">
+                            <label>NIVEL</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="Nivel" runat="server" CssClass="form-control"></asp:TextBox>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -78,7 +84,7 @@
                 <table>
                     <tr>
                         <td>
-                            <asp:Button ID="btnRegistrarDocente" runat="server" CssClass="btn btn-primary" width="200px" text="Registrar"/>
+                            <asp:Button ID="btnRegistrarDocente" runat="server" CssClass="btn btn-primary" width="200px" text="Registrar" OnClick="btnRegistrarDocente_Click1" />
                         </td>
                         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                         <td>
