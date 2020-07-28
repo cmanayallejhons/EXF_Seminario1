@@ -1,0 +1,171 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="CapaPresentacion.Home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>COLEGIO SANTA LUCIA</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta name="viewport" content="width=device-width, initi-scale=1, maximun-scale=1, user-scalable=no"/>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/EstiloAdmin.css" rel="stylesheet" type="text/css"/>
+    <style>
+        html, body {
+            min-height: 100%;
+            padding: 0;
+            margin: 0;
+            font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background: #79B0C8 !important;
+        }
+
+        iframe {
+            display: block; 
+            overflow: auto;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .frame {
+            height: 49px;
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+            .frame a {
+                color: #666;
+            }
+
+                .frame a:hover {
+                    color: #222;
+                }
+
+            .frame .buttons a {
+                height: 49px;
+                line-height: 49px;
+                display: inline-block;
+                text-align: center;
+                width: 50px;
+                border-left: 1px solid #ddd;
+            }
+
+            .frame .brand {
+                color: #444;
+                font-size: 20px;
+                line-height: 49px;
+                display: inline-block;
+                padding-left: 10px;
+            }
+
+                .frame .brand small {
+                    font-size: 14px;
+                }
+
+        a, a:hover {
+            text-decoration: none;
+        }
+
+        .container-fluid {
+            padding: 0;
+            margin: 0;
+        }
+
+        .text-muted {
+            color: #999;
+        }
+
+        .ad {
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background: #222;
+            background: rgba(0,0,0,0.8);
+            width: 100%;
+            color: #fff;
+            display: none;
+        }
+
+        #close-ad {
+            float: left;
+            margin-left: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #close {
+            cursor: pointer;
+        }
+
+        #no-cursor {
+            cursor: none;
+        }
+    </style>
+</head>
+<body class="skin-blue">
+    <header class="header">
+        <a href="#" class="logo">C.N. SANTA LUCIA</a>
+        <nav class="navbar navbar-static-top" role="navigation">
+            <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+        </nav>
+    </header>
+
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+        <aside class="left-side sidebar-offcanvas">
+            <section class="sidebar">
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="/img/admin.png" class="img-circle" alt="User Image"/>
+                    </div>
+                    <div class="pull-left info">
+                        <p>Administrador</p>
+                        <p style="color: green">En Linea</p>
+                    </div>
+                </div>
+                <ul class="sidebar-menu">
+                    <li class="active"><a href="FormAdministrador.aspx"><i class="fa fa-user"></i><span>Perfil Administrador</span></a></li>
+                    <li><a href="FrmRegistrarUsuario.aspx"><i class="fa fa-th"></i><span>Registrar Docente</span></a></li>
+                    <li><a href="#"><i class="fa fa-th"></i><span>Registrar Exámen</span></a></li>
+                    <li><a href="#"><i class="fa fa-th"></i><span>Registrar Preguntas</span></a></li>
+                </ul>
+            </section>
+        </aside>
+        <aside class="right-side">
+            <section class="content-header">
+                <h1>
+                    <asp:Label ID="lblOpcionMenu" runat="server" Text="Panel General"></asp:Label>
+                </h1>
+            </section>
+            <section class="content">
+                <form id="form1" runat="server">
+                    <div align="right">
+                        <asp:Button ID="btnCerrar" runat="server" CssClass="btn btn-danger" width="120px" text="Cerrar Sessión" OnClick="btnCerrar_Click"/>
+                    </div>
+                    <div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            <!-- AQUI CARGA EL DISEÑO DE LA PAGINA QUE HEREDA DE MASTER PAGE -->
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </form>
+            </section>
+        </aside>
+    </div>
+</body>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="js/AdminLTE/app.js" type="text/javascript"></script>
+
+    <asp:ContentPlaceHolder ID="footer" runat="server"></asp:ContentPlaceHolder> 
+</html>
