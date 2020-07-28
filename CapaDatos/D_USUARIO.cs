@@ -1,4 +1,5 @@
-﻿using CapaEntidades.DTO;
+﻿using CapaEntidades.Cache;
+using CapaEntidades.DTO;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -25,10 +26,10 @@ namespace CapaDatos
                     {
                         while (reader.Read())
                         {
-                            //UsuarioLoginCache.US_IDUSUARIO = reader.GetInt32(0);
-                            //UsuarioLoginCache.US_USUARIO = reader.GetString(1);
-                            //UsuarioLoginCache.CN_IDCONSTANTE = reader.GetInt32(3);
-                            //UsuarioLoginCache.PE_IDPERSONA = reader.GetInt32(4);
+                            UsuarioLoginCache.US_IDUSUARIO = reader.GetInt32(0);
+                            UsuarioLoginCache.US_USUARIO = reader.GetString(1);
+                            UsuarioLoginCache.CN_IDCONSTANTE = reader.GetInt32(3);
+                            UsuarioLoginCache.PE_IDPERSONA = reader.GetInt32(4);
                         }
                         return true;
                     }
