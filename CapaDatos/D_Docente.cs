@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    class D_Docente : Conexion
+    public class D_Docente : Conexion
     {
         public void insertarDocente(E_PERSONA persona)
         {
@@ -33,6 +33,7 @@ namespace CapaDatos
                     comand.Parameters.AddWithValue("@US_IDUSUARIO", UsuarioLoginCache.US_IDUSUARIO);
 
                     comand.CommandType = CommandType.StoredProcedure;
+
                     comand.ExecuteNonQuery();
                 }
             }
@@ -71,7 +72,7 @@ namespace CapaDatos
             return Lista;
         }
 
-        public void actualizarAlumno(E_PERSONA persona)
+        public void actualizarDocente(E_PERSONA persona)
         {
 
             using (var conexion = GetConnection())

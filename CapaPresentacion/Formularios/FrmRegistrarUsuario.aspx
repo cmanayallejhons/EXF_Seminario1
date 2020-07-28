@@ -78,11 +78,11 @@
                 <table>
                     <tr>
                         <td>
-                            <asp:Button ID="btnRegistrarAlumno" runat="server" CssClass="btn btn-primary" width="200px" text="Registrar"/>
+                            <asp:Button ID="btnRegistrarDocente" runat="server" CssClass="btn btn-primary" width="200px" text="Registrar"/>
                         </td>
                         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                         <td>
-                            <asp:Button ID="btnCancelarAlumno" runat="server" CssClass="btn btn-danger" width="200px" text="Cancelar" />
+                            <asp:Button ID="btnCancelarDocente" runat="server" CssClass="btn btn-danger" width="200px" text="Cancelar" />
                         </td>
                     </tr>
                 </table>

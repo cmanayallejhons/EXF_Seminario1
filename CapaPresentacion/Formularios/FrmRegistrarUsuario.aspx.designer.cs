@@ -87,22 +87,22 @@ namespace login
         protected global::System.Web.UI.WebControls.TextBox txtTelefono;
 
         /// <summary>
-        /// btnRegistrarAlumno control.
+        /// btnRegistrarDocente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRegistrarAlumno;
+        protected global::System.Web.UI.WebControls.Button btnRegistrarDocente;
 
         /// <summary>
-        /// btnCancelarAlumno control.
+        /// btnCancelarDocente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancelarAlumno;
+        protected global::System.Web.UI.WebControls.Button btnCancelarDocente;
 
         /// <summary>
         /// txtModalNombre control.
