@@ -42,9 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="conexion.cs" />
+    <Compile Include="D_ConstanteDAO.cs" />
+    <Compile Include="D_ExamenDAO.cs" />
     <Compile Include="D_NIVELDAO.cs" />
     <Compile Include="D_PersonaDAO.cs" />
     <Compile Include="D_PersonalDAO.cs" />
+    <Compile Include="D_PreguntasDAO.cs" />
     <Compile Include="D_USUARIO.cs" />
     <Compile Include="D_UsuarioDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
