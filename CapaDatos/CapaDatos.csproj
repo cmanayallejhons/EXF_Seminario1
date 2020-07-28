@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="conexion.cs" />
     <Compile Include="D_PersonaDAO.cs" />
+    <Compile Include="D_PersonalDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
