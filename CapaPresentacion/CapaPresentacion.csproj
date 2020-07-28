@@ -80,6 +80,8 @@
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\ionicons.min.css" />
     <Content Include="Formularios\FormAdministrador.aspx" />
+    <Content Include="Formularios\FrmDocente.aspx" />
+    <Content Include="Formularios\FrmExamenDoc.aspx" />
     <Content Include="Formularios\FrmRegistrarUsuario.aspx" />
     <Content Include="HtmlPage1.html" />
     <Content Include="img\admin.png" />
@@ -99,12 +101,32 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Docente.Master.cs">
+      <DependentUpon>Docente.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Docente.Master.designer.cs">
+      <DependentUpon>Docente.Master</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FormAdministrador.aspx.cs">
       <DependentUpon>FormAdministrador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Formularios\FormAdministrador.aspx.designer.cs">
       <DependentUpon>FormAdministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmDocente.aspx.cs">
+      <DependentUpon>FrmDocente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmDocente.aspx.designer.cs">
+      <DependentUpon>FrmDocente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmExamenDoc.aspx.cs">
+      <DependentUpon>FrmExamenDoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmExamenDoc.aspx.designer.cs">
+      <DependentUpon>FrmExamenDoc.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmRegistrarUsuario.aspx.cs">
       <DependentUpon>FrmRegistrarUsuario.aspx</DependentUpon>
@@ -137,6 +159,7 @@
     <Content Include="Bootstrap\bootstrap.css.map" />
     <Content Include="Bootstrap\bootstrap.min.css.map" />
     <Content Include="Home.Master" />
+    <Content Include="Docente.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
