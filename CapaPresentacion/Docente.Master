@@ -134,8 +134,8 @@
                     </div>
                 </div>
                 <ul class="sidebar-menu">
-                    <li class="active"><a href="#"><i class="fa fa-user"></i><span>Perfil Docente</span></a></li>
-                    <li><a href="#"><i class="fa fa-th"></i><span>Exámen</span></a></li>
+                    <li class="active"><a href="FrmDocente.aspx"><i class="fa fa-user"></i><span>Perfil Docente</span></a></li>
+                    <li><a href="FrmExamenDoc.aspx"><i class="fa fa-th"></i><span>Exámen</span></a></li>
                 </ul>
             </section>
         </aside>
