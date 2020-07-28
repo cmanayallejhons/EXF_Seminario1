@@ -21,6 +21,11 @@ namespace CapaEntidades.DTO
             get { return NI_NIVEL; }
             set { NI_NIVEL = value; }
         }
+
+        public E_NIVEL()
+        {
+        }
+
         public E_NIVEL(int nI_IDNIVEL, string nI_NIVEL)
         {
             NI_IDNIVEL = nI_IDNIVEL;
