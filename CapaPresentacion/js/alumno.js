@@ -31,119 +31,119 @@ function sendDataAjax() {
             console.log(xhr.status + " \n" + xhr.responseText, " \n" + thrownError);
         },
         success: function (data) {
-            //console.log(data.d);
+            //console.log(data);
             addRowDT(data.d);
         }
     });
 }
 
 
-function updateDataAjax() {
+//function updateDataAjax() {
 
-    var obj = JSON.stringify({ id: JSON.stringify(data[0]),
-        nom: $("#txtModalNombre").val(),
-        pat: $("#txtModalPat").val(),
-        mat: $("#txtModalMat").val(),
-        dni: $("#txtModalDNI").val(),
-        fecha: $("#txtModalFecha").val(),
-        tel: $("#txtModalTelefono").val(),
-        direccion: $("#txtModalDireccion").val() })
+//    var obj = JSON.stringify({ id: JSON.stringify(data[0]),
+//        nom: $("#txtModalNombre").val(),
+//        pat: $("#txtModalPat").val(),
+//        mat: $("#txtModalMat").val(),
+//        dni: $("#txtModalDNI").val(),
+//        fecha: $("#txtModalFecha").val(),
+//        tel: $("#txtModalTelefono").val(),
+//        direccion: $("#txtModalDireccion").val() })
         
 
-    $.ajax({
-        type: "POST",
-        url: "FrmRegistrarUsuario.aspx/ActualizarAlumno",
-        data: obj,
-        dataType: "json",
-        contentType: 'application/json; charset=utf-8',
-        error: function (xhr, ajaxOptions, thrownError) {
-            console.log(xhr.status + " \n" + xhr.responseText, "\n" + thrownError);
-        },
-        success: function (response) {
-            console.log(response);
-            /*if (response.d) {
-                alert("Registro actualizado de manera correcta.");
-            } else {
-                alert("No se pudo actualizar el registro.");
-            }*/
-        }
-    });
+//    $.ajax({
+//        type: "POST",
+//        url: "FrmRegistrarUsuario.aspx/ActualizarAlumno",
+//        data: obj,
+//        dataType: "json",
+//        contentType: 'application/json; charset=utf-8',
+//        error: function (xhr, ajaxOptions, thrownError) {
+//            console.log(xhr.status + " \n" + xhr.responseText, "\n" + thrownError);
+//        },
+//        success: function (response) {
+//            console.log(response);
+//            /*if (response.d) {
+//                alert("Registro actualizado de manera correcta.");
+//            } else {
+//                alert("No se pudo actualizar el registro.");
+//            }*/
+//        }
+//    });
 
-}
+//}
 
-function deleteDataAjax(data) {
+//function deleteDataAjax(data) {
 
-    var obj = JSON.stringify({ id: JSON.stringify(data) });
+//    var obj = JSON.stringify({ id: JSON.stringify(data) });
 
-    $.ajax({
-        type: "POST",
-        url: "FrmRegistrarUsuario.aspx/EliminarAlumno",
-        data: obj,
-        dataType: "json",
-        contentType: 'application/json; charset=utf-8',
-        error: function (xhr, ajaxOptions, thrownError) {
-            console.log(xhr.status + " \n" + xhr.responseText, "\n" + thrownError);
-        },
-        success: function (response) {
-            if (response.d) {
-                alert("Registro eliminado de manera correcta.");
-            } else {
-                alert("No se pudo eliminar el registro.");
-            }
-        }
-    });
-}
+//    $.ajax({
+//        type: "POST",
+//        url: "FrmRegistrarUsuario.aspx/EliminarAlumno",
+//        data: obj,
+//        dataType: "json",
+//        contentType: 'application/json; charset=utf-8',
+//        error: function (xhr, ajaxOptions, thrownError) {
+//            console.log(xhr.status + " \n" + xhr.responseText, "\n" + thrownError);
+//        },
+//        success: function (response) {
+//            if (response.d) {
+//                alert("Registro eliminado de manera correcta.");
+//            } else {
+//                alert("No se pudo eliminar el registro.");
+//            }
+//        }
+//    });
+//}
 
-// evento click para boton actualizar
-$(document).on('click', '.btn-edit', function (e) {
-    e.preventDefault();
+//// evento click para boton actualizar
+//$(document).on('click', '.btn-edit', function (e) {
+//    e.preventDefault();
 
-    var row = $(this).parent().parent()[0];
-    data = tabla.fnGetData(row);
-    fillModalData();
+//    var row = $(this).parent().parent()[0];
+//    data = tabla.fnGetData(row);
+//    fillModalData();
 
-});
-
-
-// evento click para boton eliminar
-$(document).on('click', '.btn-delete', function (e) {
-    e.preventDefault();
-    //primer método: eliminar la fila del datatble
-    var row = $(this).parent().parent()[0];
-    var data = tabla.fnGetData(row);
-
-    deleteDataAjax(data[0]);
-    //segundo método: enviar el codigo del paciente al servidor y eliminarlo, renderizar el datatable
-    // paso 1: enviar el id al servidor por medio de ajax
-    //deleteDataAjax(dataRow[0]);
-    // paso 2: renderizar el datatable
-    //sendDataAjax();
-
-});
+//});
 
 
-// cargar datos en el modal
-function fillModalData() {
+//// evento click para boton eliminar
+//$(document).on('click', '.btn-delete', function (e) {
+//    e.preventDefault();
+//    //primer método: eliminar la fila del datatble
+//    var row = $(this).parent().parent()[0];
+//    var data = tabla.fnGetData(row);
 
-    $("#txtModalNombre").val(data[1]);
-    $("#txtModalPat").val(data[2]);
-    $("#txtModalMat").val(data[3]);
-    $("#txtModalDNI").val(data[4]);
-    $("#txtModalFecha").val(data[5]);
-    $("#txtModalTelefono").val(data[6]);
-    $("#txtModalDireccion").val(data[7]);
+//    deleteDataAjax(data[0]);
+//    //segundo método: enviar el codigo del paciente al servidor y eliminarlo, renderizar el datatable
+//    // paso 1: enviar el id al servidor por medio de ajax
+//    //deleteDataAjax(dataRow[0]);
+//    // paso 2: renderizar el datatable
+//    //sendDataAjax();
 
-
-}
-
-// enviar la informacion al servidor
-$("#btnactualizar").click(function (e) {
-    e.preventDefault();
-    updateDataAjax();
+//});
 
 
-    //sendDataAjax();
-});
+//// cargar datos en el modal
+//function fillModalData() {
+
+//    $("#txtModalNombre").val(data[1]);
+//    $("#txtModalPat").val(data[2]);
+//    $("#txtModalMat").val(data[3]);
+//    $("#txtModalDNI").val(data[4]);
+//    $("#txtModalFecha").val(data[5]);
+//    $("#txtModalTelefono").val(data[6]);
+//    $("#txtModalDireccion").val(data[7]);
+
+
+//}
+
+//// enviar la informacion al servidor
+//$("#btnactualizar").click(function (e) {
+//    e.preventDefault();
+//    updateDataAjax();
+
+
+//    //sendDataAjax();
+//});
 
 // Llamando a la funcion de ajax al cargar el documento
 sendDataAjax();

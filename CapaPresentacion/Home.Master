@@ -136,8 +136,8 @@
                 <ul class="sidebar-menu">
                     <li class="active"><a href="FormAdministrador.aspx"><i class="fa fa-user"></i><span>Perfil Administrador</span></a></li>
                     <li><a href="FrmRegistrarUsuario.aspx"><i class="fa fa-th"></i><span>Registrar Docente</span></a></li>
-                    <li><a href="#"><i class="fa fa-th"></i><span>Registrar Exámen</span></a></li>
-                    <li><a href="#"><i class="fa fa-th"></i><span>Registrar Preguntas</span></a></li>
+                    <li><a href="FrmExamen.aspx"><i class="fa fa-th"></i><span>Registrar Exámen</span></a></li>
+                    <li><a href="FrmPregunta.aspx"><i class="fa fa-th"></i><span>Registrar Preguntas</span></a></li>
                 </ul>
             </section>
         </aside>

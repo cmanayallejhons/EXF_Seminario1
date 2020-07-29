@@ -79,21 +79,22 @@ namespace login
         //    }
         //}
 
-        //[WebMethod]
-        //public static List<E_PERSONA> ListarAlumnos()
-        //{
-        //    //List<E_PERSONA> Lista = null;
-        //    //N_Alumno n_alumno = new N_Alumno();
+        [WebMethod]
+        public static List<E_PERSONA> ListarAlumnos()
+        {
+            List<E_PERSONA> Lista = null;
+            N_Docente n_alumno = new N_Docente();
 
-        //    //try
-        //    //{
-        //    //    Lista = n_alumno.listarAlumnos();
-        //    //} catch
-        //    //{
-        //    //    return null;
-        //    //}
-        //    //return Lista;
-        //}
+            try
+            {
+                Lista = n_alumno.listarDocentes();
+            }
+            catch
+            {
+                return null;
+            }
+            return Lista;
+        }
 
         //[WebMethod]
         //public static void ActualizarAlumno(String id, String nom, String pat, String mat, String dni, String fecha, String tel, String direccion)
