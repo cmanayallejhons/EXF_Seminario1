@@ -15,7 +15,6 @@
             <div class="user_card">
                 <div class="d-flex justify-content-center">
                     <div class="brand_logo_container">
-                        <%--<asp:Image ID="imgLogo" class="brand_logo" src="img/docente.png" runat="server" style="border-radius: 70%"/>--%>
                         <h2 style="background: #e4e7e7; border-radius: 7%; margin-top: 20%; color: #224477">Inicio de Sesión</h2>
                     </div>
                 </div>
@@ -44,6 +43,11 @@
             </div>
         </div>
     </div>
+    <footer id="sticky-footer" class="py-4 text-white-50">
+        <div class="container text-center">
+            <small>Av.André Avelino Cáseres</small>
+        </div>
+    </footer>
 
 </body>
 </html>

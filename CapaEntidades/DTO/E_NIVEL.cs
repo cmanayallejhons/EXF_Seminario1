@@ -31,5 +31,10 @@ namespace CapaEntidades.DTO
         {
             NI_IDNIVEL = nI_IDNIVEL;
         }
+
+        public E_NIVEL()
+        {
+
+        }
     }
 }

@@ -38,49 +38,26 @@ namespace login
 
 
 
-        //protected void btnCancelarAlumno_Click(object sender, EventArgs e)
-        //{
-        //    limpiarCampos();
-        //}
+        protected void btnCancelarAlumno_Click(object sender, EventArgs e)
+        {
+            limpiarCampos();
+        }
 
-        //public void limpiarCampos()
-        //{
-        //    txtNombre.Text = ""; 
-        //    txtApePa.Text = ""; 
-        //    txtApeMa.Text = ""; 
-        //    txtNumDoc.Text = ""; 
-        //    txtNaci.Text = ""; 
-        //    txtTelefono.Text = ""; 
-        //    txtDireccion.Text = ""; 
-        //    txtSexo.Text = "";
-        //}
+        public void limpiarCampos()
+        {
+            txtNombre.Text = "";
+            txtApePa.Text = "";
+            txtApeMa.Text = "";
+            txtNumDoc.Text = "";
+            txtNaci.Text = "";
+            txtTelefono.Text = "";
+            txtDireccion.Text = "";
+            txtSexo.Text = "";
+        }
 
-        //protected void btnBuscarApoderado_Click(object sender, EventArgs e)
-        //{
-        //    if (txtApoderadoDoc.Text != "")
-        //    {
-        //        N_Persona n_persona = new N_Persona();
-        //        E_PERSONAL e_personal = new E_PERSONAL();
-
-        //        e_personal = n_persona.buscarPersonal(Convert.ToInt32(txtApoderadoDoc.Text));
-
-        //        if (e_personal.pER_IDPERSONAL != 0)
-        //        {
-        //            txtApoderado.Text = e_personal.pER_IDPERSONAL+ "";
-        //            txtApoderadoDoc.Text = "";
-        //        } else {
-        //            Response.Write("<script>alert('APODERADO NO ESXISTE, REGISTRE UNO')</script>");
-        //        }
-
-
-        //    } else
-        //    {
-        //        Response.Write("<script>alert('CAMPO VACIO')</script>");
-        //    }
-        //}
 
         [WebMethod]
-        public static List<E_PERSONA> ListarAlumnos()
+        public static List<E_PERSONA> ListarDocentes()
         {
             List<E_PERSONA> Lista = null;
             N_Docente n_alumno = new N_Docente();

@@ -49,7 +49,7 @@ namespace CapaDatos
                 using (var comand = new SqlCommand())
                 {
                     comand.Connection = conexion;
-                    comand.CommandText = "SP_MOSTRAR_DOCENTES";
+                    comand.CommandText = "SP_MOSTRAR_DOCENTE";
                     comand.CommandType = CommandType.StoredProcedure;
 
                     using (SqlDataReader dr = comand.ExecuteReader())
@@ -59,13 +59,12 @@ namespace CapaDatos
                             E_PERSONA alumno = new E_PERSONA();
                             alumno.pE_IDPERSONA = Convert.ToInt32(dr["ID"]);
                             alumno.pE_NOMBRE = dr["NOMBRE"].ToString();
-                            alumno.pE_APELLIDOPAT = dr["APELLIDO PATERNO"].ToString();
-                            alumno.pE_APELLIDOMAT = dr["APELLIDO MATERNO"].ToString();
+                            alumno.pE_APELLIDOPAT = dr["APELLIDO PAT"].ToString();
+                            alumno.pE_APELLIDOMAT = dr["APELLIDO MAT"].ToString();
                             alumno.pE_IDENTIFICACION = dr["IDENTIFICACION"].ToString();
                             alumno.pE_FECHANAC = dr["FECHA NAC"].ToString();
                             alumno.pE_TELEFONO = dr["TELEFONO"].ToString();
                             alumno.pE_DIRECCION = dr["DIRECCION"].ToString();
-
                             Lista.Add(alumno);
                         }
 
